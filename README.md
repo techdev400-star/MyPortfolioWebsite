@@ -133,9 +133,4 @@ Edit `index.html` and `about.html` to update:
 
 This project is open source and available for personal use.
 
-## Contact
 
-Oyetola Joseph Oyeyemi
-- Email: oyetola.joseph@yahoo.com
-- Phone: 240-486-6704
-- LinkedIn: [Profile](https://www.linkedin.com/in/oyetola-j-oyeyemi-55a682228)
