@@ -1,6 +1,6 @@
 # Professional Portfolio Website
 
-A modern, responsive single-page portfolio website showcasing Oyetola Joseph Oyeyemi's professional profile as a System Analyst.
+A modern, responsive portfolio website showcasing professional profile as a System Analyst. Built with vanilla HTML, CSS, and JavaScript.
 
 ## Features
 
@@ -8,6 +8,7 @@ A modern, responsive single-page portfolio website showcasing Oyetola Joseph Oye
 - **Smooth Navigation**: Smooth scrolling between sections with active link highlighting
 - **Modern UI**: Clean, professional design with a blue color scheme
 - **Mobile Menu**: Hamburger menu for mobile devices
+- **Multi-page**: Home page with portfolio sections and dedicated About page
 - **Print-Friendly**: Optimized styles for printing/PDF export
 
 ## File Structure
@@ -15,6 +16,7 @@ A modern, responsive single-page portfolio website showcasing Oyetola Joseph Oye
 ```
 /
 ├── index.html          # Main HTML structure
+├── about.html          # About/Cover letter page
 ├── styles/
 │   └── main.css        # All styling (responsive design, animations)
 ├── scripts/
@@ -28,28 +30,17 @@ A modern, responsive single-page portfolio website showcasing Oyetola Joseph Oye
 
 1. Clone or download this repository
 2. Open `index.html` in your web browser
-3. That's it! No build process or dependencies required
 
-### Using a Local Server (Recommended)
+**Using a Local Server (Recommended):**
 
-For the best experience, use a local web server:
-
-**Using Python:**
 ```bash
 # Python 3
-python -m http.server 8000
+python3 -m http.server 8000
 
-# Python 2
-python -m SimpleHTTPServer 8000
-```
-
-**Using Node.js:**
-```bash
+# Node.js
 npx http-server
-```
 
-**Using PHP:**
-```bash
+# PHP
 php -S localhost:8000
 ```
 
@@ -57,54 +48,65 @@ Then open `http://localhost:8000` in your browser.
 
 ## Deployment
 
-### GitHub Pages
+### Deploy to GitHub
 
 1. Create a new repository on GitHub
-2. Push all files to the repository
-3. Go to Settings > Pages
-4. Select the main branch as the source
-5. Your site will be available at `https://yourusername.github.io/repository-name`
+2. Initialize git in your project directory:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
+   git push -u origin main
+   ```
 
-### Netlify
+### Host with Netlify
 
-1. Drag and drop the project folder to [Netlify Drop](https://app.netlify.com/drop)
-2. Your site will be live instantly with a random URL
-3. You can customize the domain name in settings
+#### Method 1: Connect to GitHub (Recommended)
 
-### Vercel
+1. Go to [Netlify](https://app.netlify.com) and sign in
+2. Click "Add new site" → "Import an existing project"
+3. Connect to GitHub and select your repository
+4. Configure build settings:
+   - **Branch to deploy**: `main`
+   - **Build command**: (leave empty)
+   - **Publish directory**: `/` or `.` (leave empty)
+5. Click "Deploy site"
+6. Your site will be live at `https://your-site-name.netlify.app`
 
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run `vercel` in the project directory
-3. Follow the prompts to deploy
+#### Method 2: Drag and Drop
 
-### Other Hosting Options
+1. Go to [Netlify Drop](https://app.netlify.com/drop)
+2. Drag and drop your project folder
+3. Your site is live instantly
 
-Any static hosting service will work:
-- AWS S3 + CloudFront
-- Google Cloud Storage
-- Azure Static Web Apps
-- Any web hosting provider that supports static files
+### Custom Domain (Optional)
+
+1. In Netlify: Site settings → Domain management → Add custom domain
+2. Follow Netlify's DNS configuration instructions
+3. SSL certificate is automatically provisioned
 
 ## Customization
 
 ### Colors
 
-Edit the CSS custom properties in `styles/main.css`:
+Edit CSS custom properties in `styles/main.css`:
 
 ```css
 :root {
-    --primary-color: #2563eb;      /* Main blue color */
-    --primary-dark: #1e40af;       /* Darker blue for hover states */
-    --secondary-color: #64748b;    /* Secondary gray color */
-    --text-color: #1e293b;         /* Main text color */
-    --bg-color: #ffffff;            /* Background color */
-    --bg-light: #f8fafc;           /* Light background for sections */
+    --primary-color: #2563eb;
+    --primary-dark: #1e40af;
+    --secondary-color: #64748b;
+    --text-color: #1e293b;
+    --bg-color: #ffffff;
+    --bg-light: #f8fafc;
 }
 ```
 
 ### Content
 
-Edit `index.html` to update:
+Edit `index.html` and `about.html` to update:
 - Personal information
 - Experience details
 - Skills
@@ -119,6 +121,13 @@ Edit `index.html` to update:
 - Safari (latest)
 - Edge (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
+
+## Technologies Used
+
+- HTML5
+- CSS3 (Custom Properties, Flexbox, Grid)
+- Vanilla JavaScript
+- No dependencies or build tools required
 
 ## License
 
